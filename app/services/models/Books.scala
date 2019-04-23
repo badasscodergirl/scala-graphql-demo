@@ -3,7 +3,6 @@ package services.models
 import slick.lifted.{ProvenShape, Tag}
 import slick.jdbc.PostgresProfile.api._
 
-//id	book_id	best_book_id	books_count	isbn	isbn13	authors	original_publication_year original_title	title	language_code	image_url	small_image_url
 case class Book(id: Long, bookId: Long, title: String, originalTitle: String, languageCode: String,
                 bestBookId: Option[Long], booksCount: Long, isbn: Long, isbn13: Long, originalPublicationYear: Int,
                 imageUrl: Option[String], smallImageUrl: Option[String])

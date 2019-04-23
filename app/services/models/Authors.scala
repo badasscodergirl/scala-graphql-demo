@@ -7,7 +7,7 @@ case class Author(id: Long, name: String)
 
 class Authors(tag: Tag) extends Table[Author](tag, _tableName = "authors") {
 
-  def id = column[Long]("id", O.PrimaryKey)
+  def id = column[Long]("id", O.PrimaryKey, O.AutoInc)
   def name = column[String]("name")
 
   override def * : ProvenShape[Author] = (id, name) <> (Author.tupled, Author.unapply)
